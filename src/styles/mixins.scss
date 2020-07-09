@@ -2,5 +2,10 @@
     background: linear-gradient(90deg, $main-color 2.61%, $secondary-color 112.6%);
     background-blend-mode: darken;
     color: $text-color;
-    
+}
+@mixin textSettings($weight, $size, $height, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
 }

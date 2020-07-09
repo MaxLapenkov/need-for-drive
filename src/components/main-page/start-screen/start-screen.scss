@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__content {
+        flex-grow: 1;
+    }
+    &__footer{
+        flex-shrink: 0;
+    }
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+        @include textSettings($bold, 30px, 35px, $main-accent);
+    }
+    &__location {
+        @include textSettings($regular, 14px, 16px, $dark-gray);
+    }
+}
+.content {
+    margin-top: 163px;
+    &__header {
+        @include textSettings($bold, 70px, 66px, $main-black);
+    }
+    &__name {
+        margin-top: 4px;
+        @include textSettings($bold, 70px, 66px, $main-accent);
+    }
+    &__desc {
+        margin-top: 34px;
+        @include textSettings($light, 26px, 30px, $dark-gray);
+    }
+    &__button {
+        margin-top: 60px;
+    }
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__copyright {
+        @include textSettings($regular, 13px, 15px, $dark-gray);
+    }
+    &__phone {
+        @include textSettings($regular, 13px, 15px, $main-black);
+    }
+}

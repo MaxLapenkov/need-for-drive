@@ -1,3 +1,4 @@
+// colors
 $main-accent: #0EC261;
 $main-accent-hsl: hsl(148, 87%, 41%);
 $main-accent-hsl-10:  hsl(148, 87%, 31%);
@@ -12,6 +13,13 @@ $main-black: #121212;
 $dark-gray: #999999;
 $light-gray: #EEEEEE;
 
+//font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+//device-widths
 $mobile-width: 767px;
 $tablet-width: 1023px;
 $desktop-min-width: 1439px;

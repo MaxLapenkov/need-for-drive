@@ -1,5 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+html, body, #root {
+    height: 100%;
+}
 body {
     font-family: 'Roboto', sans-serif;
+    color: $main-black;
+}
+.container {
+    height: 100%;
+    width: 50vw;
+    padding: 32px 3.5vw;
 }
 .button {
     @include buttonColor($main-accent-hsl, $additional-accent-hsl, #fff);
@@ -15,4 +27,18 @@ body {
     &:disabled {
         background: $light-gray;
     }
+}
+a {
+    text-decoration: none;
+    color: $main-black;
+    &:hover,
+    &:active {
+        color: $main-accent;
+    }
+    &:disabled {
+        color: $dark-gray;
+    }
+}
+h1, h2, p{
+    margin: 0;
 }
