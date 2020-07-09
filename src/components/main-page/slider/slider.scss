@@ -1,0 +1,121 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+.slider {
+    background-color: $black-background;
+    flex: 1 2 688px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    &__control {
+        position: absolute;
+        content: "";
+        width: 64px;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: rgba(14, 194, 97, 0.2);
+        }
+    }
+    &__control-left {
+        top: 0;
+        left: 0;
+    }
+    &__control-right {
+        top: 0;
+        right: 0;
+    }
+    &__radio-controls {
+        position: absolute;
+        content: "";
+        bottom: 32px;
+        left: calc(50% - 72px / 2);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__radio {
+        margin-left: 8px;
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+        &--active {
+            background-color: $main-accent;
+        }
+    }
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 128px;
+        padding-right: 128px;
+        height: 100%;
+        
+        
+    }
+    &__item-first {
+        background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%),
+                 url('../../../images/slider_image_1.jpg') 50% 50% / cover;
+    }
+    &__item-second {
+        background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%),
+                 url('../../../images/slider_image_2.jpg') 50% 50% / cover;
+    }
+    &__item-third {
+        background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%),
+                 url('../../../images/slider_image_3.jpg') 50% 50% / cover;
+    }
+    &__item-fourth {
+        background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%),
+                 url('../../../images/slider_image_4.jpg') 50% 50% / cover;
+    }
+    &__header{
+        @include textSettings($medium, 40px, 47px, #fff);
+        margin-bottom: 8px;
+    }
+    &__info {
+        @include textSettings($light, 24px, 22px, $light-gray);
+        margin-bottom: 32px;
+    }
+    &__button {
+        @include buttonColor($main-accent-hsl-10, $additional-accent-hsl-10, #fff);
+        margin-bottom: 100px;
+        align-self: flex-start;
+    }
+}
+.hidden {
+    display: none;
+}
+@media screen and (max-width: $desktop-min-width) {
+    .slider{
+        &__control {
+            width: 32px;
+        }
+        &__item {
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+    }
+}
+@media screen and (max-width: $tablet-width) {
+    .slider {
+        display: none;
+    }
+}

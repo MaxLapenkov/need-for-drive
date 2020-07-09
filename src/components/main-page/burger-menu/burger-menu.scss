@@ -1,6 +1,6 @@
 @import '../../../styles/variables.scss';
 .burger-menu {
-    width: 64px;
+    flex: 0 0 64px;
     padding-left: 16px;
     padding-right: 16px;
     background-color: $black-background;
@@ -18,5 +18,23 @@
         border: none;
         padding: 0;
         color: $main-accent;
+    }
+}
+@media screen and (max-width: $mobile-width) {
+    .burger-menu {
+        background-color: transparent;
+        height: 33px;
+        width: 33px;
+        top: 16px;
+        left: 16px;
+        padding: 0;
+        align-self: flex-start;
+        position: absolute;
+        svg path {
+            stroke: black;
+        }
+        &__lang {
+            display: none;
+        }
     }
 }
