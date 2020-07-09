@@ -32,7 +32,12 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "last 1 edge",
+      "IE 11"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
   }
 }

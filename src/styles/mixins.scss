@@ -1,0 +1,6 @@
+@mixin buttonColor($main-color, $secondary-color, $text-color) {
+    background: linear-gradient(90deg, $main-color 2.61%, $secondary-color 112.6%);
+    background-blend-mode: darken;
+    color: $text-color;
+    
+}
