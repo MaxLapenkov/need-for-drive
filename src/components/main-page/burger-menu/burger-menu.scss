@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+.burger-menu {
+    width: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: $black-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__button {
+        padding: 0;
+        background-color: inherit;
+        border: none;
+    }
+    &__lang {
+        background-color: inherit;
+        border: none;
+        padding: 0;
+        color: $main-accent;
+    }
+}
