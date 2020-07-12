@@ -13,6 +13,7 @@
         width: 100%;
     }
     &__control {
+        cursor: pointer;
         position: absolute;
         content: "";
         width: 64px;
@@ -46,6 +47,7 @@
         align-items: center;
     }
     &__radio {
+        cursor: pointer;
         margin-left: 8px;
         width: 12px;
         height: 12px;
@@ -67,7 +69,6 @@
         padding-left: 128px;
         padding-right: 128px;
         height: 100%;
-        
         
     }
     &__item-first {
@@ -95,16 +96,51 @@
         margin-bottom: 32px;
     }
     &__button {
-        @include buttonColor($main-accent-hsl-10, $additional-accent-hsl-10, #fff);
+        @include buttonColor($additional-accent-hsl-10, $main-accent-hsl-10, #fff);
         margin-bottom: 100px;
         align-self: flex-start;
+        cursor: pointer;
+        border-radius: 4px;
+        &:hover,
+        &:active {
+            @include buttonColor($additional-accent-hsl-20, $main-accent-hsl-20, #fff);
+        }
     }
+    &__button--second {
+        @include buttonColor(hsl(216, 59%, 18%), hsl(169, 82%, 26%), #fff);
+        &:hover,
+        &:active {
+            @include buttonColor(hsl(216, 59%, 8%), hsl(169, 82%, 16%), #fff);
+        }
+    }
+    &__button--third {
+        @include buttonColor(hsl(32, 59%, 18%), hsl(335, 82%, 26%), #fff);
+        &:hover,
+        &:active {
+            @include buttonColor(hsl(32, 59%, 8%), hsl(335, 82%, 16%), #fff);
+        }
+    }
+    &__button--fourth {
+        @include buttonColor(hsl(263, 59%, 18%), hsl(295, 82%, 26%), #fff);
+        &:hover,
+        &:active {
+            @include buttonColor(hsl(263, 59%, 8%), hsl(295, 82%, 16%), #fff);
+        }
+    }  
 }
 .hidden {
     display: none;
 }
 @media screen and (max-width: $desktop-min-width) {
     .slider{
+        &__header {
+            font-size: 32px;
+            line-height: 37px;
+        }
+        &__info {
+            font-size: 22px;
+            line-height: 22px;
+        }
         &__control {
             width: 32px;
         }

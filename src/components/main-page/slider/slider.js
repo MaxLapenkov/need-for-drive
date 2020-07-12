@@ -11,27 +11,27 @@ const Slider = () => {
                 </svg>
             </button>
             <div className="slider__wrapper">
-                <div className="slider__item slider__item-first ">
+                <div className="slider__item slider__item-first hidden ">
                     <h3 className="slider__header">Бесплатная парковка</h3>
                     <p className="slider__info">Оставляйте машину на платных городских парковках
                     и разрешенных местах, не нарушая ПДД,
                     а также в аэропортах.</p> 
-                    <button className="slider__button button">Подробнее</button>
+                    <button className="slider__button slider__button--first button">Подробнее</button>
                 </div>
-                <div className="slider__item slider__item-second hidden ">
+                <div className="slider__item slider__item-second ">
                     <h3 className="slider__header">Страховка</h3>
                     <p className="slider__info">Полная страховка страховка автомобиля</p> 
-                    <button className="slider__button button">Подробнее</button>
+                    <button className="slider__button slider__button--second button">Подробнее</button>
                 </div>
                 <div className="slider__item slider__item-third hidden">
                     <h3 className="slider__header">Бензин</h3>
                     <p className="slider__info">Полный бак на любой заправке города за наш счёт</p> 
-                    <button className="slider__button button">Подробнее</button>
+                    <button className="slider__button slider__button--third button">Подробнее</button>
                 </div>
                 <div className="slider__item slider__item-fourth hidden">
                     <h3 className="slider__header">Обслуживание</h3>
                     <p className="slider__info">Автомобиль проходит еженедельное ТО</p> 
-                    <button className="slider__button button">Подробнее</button>
+                    <button className="slider__button slider__button--fourth button">Подробнее</button>
                 </div>
                 <div className="slider__radio-controls">
                     <button className="slider__radio slider__radio--active"></button>
