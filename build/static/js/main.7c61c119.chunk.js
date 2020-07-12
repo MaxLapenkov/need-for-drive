@@ -1,0 +1,2 @@
+(this["webpackJsonpneed-for-drive"]=this["webpackJsonpneed-for-drive"]||[]).push([[0],{3:function(e,n,t){e.exports=t(9)},8:function(e,n,t){},9:function(e,n,t){"use strict";t.r(n);var r=t(0),o=t.n(r),c=t(2),u=t.n(c),a=(t(8),function(){return o.a.createElement("button",{className:"button"},"\u041e\u043a")});u.a.render(o.a.createElement(a,null),document.getElementById("root"))}},[[3,1,2]]]);
+//# sourceMappingURL=main.7c61c119.chunk.js.map

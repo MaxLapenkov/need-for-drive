@@ -1,8 +1,9 @@
 import React from 'react'
+import MainPage from '../main-page'
 
 const App = () => {
     return (
-        <h1>Hello world</h1>
+        <MainPage/>
     )
 }
 

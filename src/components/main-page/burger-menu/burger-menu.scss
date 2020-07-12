@@ -1,0 +1,123 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+.burger-menu {
+    flex: 0 0 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: $black-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__button {
+        cursor: pointer;
+        padding: 0;
+        background-color: inherit;
+        border: none;
+        z-index: 200;
+    }
+    
+    &__lang {
+        cursor: pointer;
+        background-color: inherit;
+        border: none;
+        padding: 0;
+        color: $main-accent;
+        &:hover{
+            color: $light-gray;
+        }
+    }
+    &__opened {
+        background: rgba(21, 27, 31, 0.81);
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+    }
+    &__info {
+        flex: 1 1 752px;
+        z-index: 200;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        padding-left: 64px;
+        padding-right: 64px;
+        background-color: $black-background;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        @include textSettings($medium, 32px, 37px, #fff);
+        margin-bottom: 24px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            color: $main-accent;
+        }
+    }
+    &__substrate {
+        flex: 1 2 688px;
+    }
+    &__social {
+        margin-top: 8px;
+    }
+    &__link {
+        margin-right: 24px;
+        svg:hover path{
+            fill: $main-accent;
+        }
+    }
+}
+@media screen and (max-width: $tablet-width) {
+    .burger-menu {
+        flex: 0 0 85px;
+        &__substrate {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: $mobile-width) {
+    .burger-menu {
+        background-color: transparent;
+        padding: 0;
+        align-self: flex-start;
+        position: absolute;
+        &__button {
+            padding-top: 20px;
+            padding-left: 28px;
+        }
+        &__closed-svg path {
+            stroke: black;
+        }
+        &__lang {
+            padding-left: 28px;
+            padding-bottom: 28px;
+            z-index: 200;
+        }
+        &__closed-lang {
+            display: none;
+        }
+        &__opened {
+            width: 100vw;
+            height: 100vh;
+        }
+        &__info {
+            padding: 0;
+            padding-left: 28px;
+            padding-top: 80px;
+            justify-content: flex-start;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+html, body, #root {
+    height: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $main-black;
+}
+.container {
+    height: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.button {
+    @include buttonColor($main-accent-hsl, $additional-accent-hsl, #fff);
+    border-radius: 8px;
+    border: none;
+    padding: 11px 48px;
+    &:hover {
+        @include buttonColor($main-accent-hsl-10, $additional-accent-hsl-10, #fff);
+    }
+    &:active {
+        @include buttonColor($main-accent-hsl-20, $additional-accent-hsl-20, #fff);
+    }
+    &:disabled {
+        background: $light-gray;
+    }
+}
+a {
+    text-decoration: none;
+    color: $main-black;
+    &:hover,
+    &:active {
+        color: $main-accent;
+    }
+    &:disabled {
+        color: $dark-gray;
+    }
+}
+h1, h2, h3, p{
+    margin: 0;
+}
+
