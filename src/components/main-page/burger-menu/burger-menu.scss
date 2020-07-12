@@ -31,13 +31,12 @@
         background: rgba(21, 27, 31, 0.81);
         position: absolute;
         content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+       
         z-index: 100;
         display: flex;
         flex-direction: row;
+        animation: animateBurger 2s linear;
+        animation-fill-mode: forwards;
     }
     &__info {
         flex: 1 1 752px;
@@ -95,15 +94,15 @@
         align-self: flex-start;
         position: absolute;
         &__button {
-            padding-top: 20px;
-            padding-left: 28px;
+            margin-top: 20px;
+            margin-left: 28px;
         }
         &__closed-svg path {
             stroke: black;
         }
         &__lang {
-            padding-left: 28px;
-            padding-bottom: 28px;
+            margin-left: 28px;
+            margin-bottom: 28px;
             z-index: 200;
         }
         &__closed-lang {
@@ -121,3 +120,48 @@
         }
     }
 }
+@keyframes animateBurger {
+    0% {
+        left: -500px;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+    }
+    10% {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 90%;
+    }
+    20% {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 80%;
+    }
+    30% {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 70%;
+    }
+    40% {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 60%;
+    }
+    50% {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+    }
+    100% {
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+}
+
