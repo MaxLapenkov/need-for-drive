@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './slider.scss';
 import SliderContent from './slider-content';
 import Dots from './dots'
+
 import image1 from '../../../images/slider_image_1.jpg';
 import image2 from '../../../images/slider_image_2.jpg';
 import image3 from '../../../images/slider_image_3.jpg';
@@ -25,17 +26,23 @@ const Slider = () => {
         transition: 0.45,
       })
     useEffect(() =>{
-        handleResize();
+      const handleResize = () => {
+        setMyComponentWidth(myRef.current.offsetWidth)
+        setState({
+          activeIndex: 0,
+          translate: 0
+        })
+      }
+    handleResize();
     if(myRef.current)
       window.addEventListener('resize', handleResize)
 
-    return ()=> {
+    return () => {
     window.removeEventListener('resize', handleResize)
     }
-  }, [myRef])
-    const handleResize = () => {
-      setMyComponentWidth(myRef.current.offsetWidth)
-    }
+  }, [myRef]);
+  
+  
   
     
   
@@ -87,6 +94,11 @@ const Slider = () => {
             <path d="M9 1L1 10L9 19" stroke="#EEEEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
         </button>
+        <button onClick={() => nextSlide()} className="slider__control slider__control-right" aria-label="change slide to the right">
+            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L9 10L1 19" stroke="#EEEEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+        </button>
         <SliderContent
           translate={translate}
           transition={transition}
@@ -94,11 +106,6 @@ const Slider = () => {
           content={content}
         >
         </SliderContent>
-        <button onClick={() => nextSlide()} className="slider__control slider__control-right" aria-label="change slide to the right">
-            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L9 10L1 19" stroke="#EEEEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-        </button>
         <Dots slides={content} activeIndex={activeIndex} changeSlide={(i) => changeSlide(i)}/>
       </div>
     )
