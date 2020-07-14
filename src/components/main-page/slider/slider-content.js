@@ -1,4 +1,5 @@
 import React from 'react'
+import Slide from './slide'
 
 const SliderContent = (props) => {
     
@@ -6,13 +7,17 @@ const SliderContent = (props) => {
         transform: `translateX(-${props.translate}px)`,
         transition: `transform ease-out ${props.transition}s`,
         height: `100%`,
-        width: `${props.width}px`,
+        width: `${props.width * props.content.length}px`,
         display: `flex`,
         background: `red`
     }
     return (
-        <div id="slider__content" style={sliderContentStyles}>
-
+        <div className="slider__content" style={sliderContentStyles}>
+            {
+                props.content.map(slide => (
+                    <Slide key={slide.image} content={slide}/>
+                ))
+            }
         </div>
     )
 }
