@@ -18,6 +18,7 @@ body {
     border-radius: 8px;
     border: none;
     padding: 11px 48px;
+    cursor: pointer;
     &:hover {
         @include buttonColor($main-accent-hsl-10, $additional-accent-hsl-10, #fff);
     }
