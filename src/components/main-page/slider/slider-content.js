@@ -9,7 +9,7 @@ const SliderContent = (props) => {
         height: `100%`,
         width: `${props.width * props.content.length}px`,
         display: `flex`,
-        background: `red`
+        background: `#151B1F`
     }
     return (
         <div className="slider__content" style={sliderContentStyles}>
