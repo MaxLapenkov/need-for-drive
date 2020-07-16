@@ -7,15 +7,20 @@ const BurgerMenu = () => {
     const toggleMenu = (status) => {
         if(status === true) {
             setMenuOpened(false);
-            
+            setBurgerIconClass('burger-menu__icon burger-menu__icon--opened');
+            setBurgerCrossIconClass('burger-menu__icon burger-menu__icon--closed')
         } else {
             setMenuOpened(true)
+            setBurgerIconClass('burger-menu__icon burger-menu__icon--closed')
+            setBurgerCrossIconClass('burger-menu__icon burger-menu__icon--opened')
         }
     }
     const [menuOpened, setMenuOpened] = useState(false);
+    const [burgerIconClass, setBurgerIconClass] = useState('burger-menu__icon');
+    const [burgerCrossIconClass, setBurgerCrossIconClass] = useState('burger-menu__icon--hidden');
     const burgerMenuClass = menuOpened ? 'burger-menu__opened': 'burger-menu__closed';
-    const burgerCrossIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--opened' : 'burger-menu__icon burger-menu__icon--closed'
-    const burgerIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--closed' : 'burger-menu__icon burger-menu__icon--opened'
+    // const burgerCrossIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--opened' : 'burger-menu__icon burger-menu__icon--closed'
+    // const burgerIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--closed' : 'burger-menu__icon burger-menu__icon--opened'
         return (
             <div className="burger-menu container">
                 <button onClick={() => toggleMenu(menuOpened)} className="burger-menu__button" aria-label="menu button">

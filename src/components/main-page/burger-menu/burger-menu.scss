@@ -27,6 +27,11 @@
         bottom: 0;
         transition: 0.6s;
     }
+    &__icon--hidden {
+        path {
+            stroke-width: 0;
+        }
+    }
     &__icon--closed {
         animation: rotate_in_cw linear 0.25s;
         animation-fill-mode: forwards;
