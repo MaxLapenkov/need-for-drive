@@ -69,6 +69,7 @@
         @include textSettings($light, 26px, 30px, $dark-gray);
     }
     &__button {
+        display: inline-block;
         margin-top: 60px;
     }
 }

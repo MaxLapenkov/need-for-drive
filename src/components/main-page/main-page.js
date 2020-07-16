@@ -7,7 +7,7 @@ import Slider from './slider'
 const MainPage = () => {
     return (
         <div className="main-page">
-            <BurgerMenu/>
+            <BurgerMenu substrate={true}/>
             <StartScreen/>
             <Slider/>
         </div>

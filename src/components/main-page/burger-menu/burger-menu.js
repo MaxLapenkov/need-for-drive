@@ -3,7 +3,7 @@ import './burger-menu.scss';
 
 import { BurgerOpened, BurgerClosed } from '../../../assets/icons';
 
-const BurgerMenu = () => {
+const BurgerMenu = ( {substrate} ) => {
     const toggleMenu = (status) => {
         if(status === true) {
             setMenuOpened(false);
@@ -19,8 +19,9 @@ const BurgerMenu = () => {
     const [burgerIconClass, setBurgerIconClass] = useState('burger-menu__icon');
     const [burgerCrossIconClass, setBurgerCrossIconClass] = useState('burger-menu__icon--hidden');
     const burgerMenuClass = menuOpened ? 'burger-menu__opened': 'burger-menu__closed';
-    // const burgerCrossIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--opened' : 'burger-menu__icon burger-menu__icon--closed'
-    // const burgerIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--closed' : 'burger-menu__icon burger-menu__icon--opened'
+    
+    const substrateClass = substrate ? 'burger-menu__substrate' : '';
+
         return (
             <div className="burger-menu container">
                 <button onClick={() => toggleMenu(menuOpened)} className="burger-menu__button" aria-label="menu button">
@@ -56,7 +57,7 @@ const BurgerMenu = () => {
                             </a>
                         </div>
                     </menu>
-                    <div className="burger-menu__substrate">
+                    <div className={substrateClass}>
                     </div>
                 </div>
             </div>

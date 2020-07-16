@@ -1,6 +1,7 @@
 import React from 'react';
 import './start-screen.scss'
-import { IconLocation } from '../../../assets/icons'
+import { IconLocation } from '../../../assets/icons';
+import { Link } from 'react-router-dom';
 
 const StartScreen = () => {
     return (
@@ -16,7 +17,7 @@ const StartScreen = () => {
                 <h1 className="content__header">Каршеринг</h1>
                 <h2 className="content__name">Need for Drive</h2>
                 <p className="content__desc">Поминутная аренда авто твоего города</p>
-                <button className="content__button button">Забронировать</button>
+                <Link to="/order/map" className="content__button button">Забронировать</Link>
             </main>
             <footer className="start-screen__footer footer">
                 <p className="footer__copyright">© 2016-2019 «Need for drive»</p>
