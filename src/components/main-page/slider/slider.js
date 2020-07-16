@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './slider.scss';
 import SliderContent from './slider-content';
-import Dots from './dots'
+import Dots from './dots';
+import { ArrowLeft } from '../../../assets/icons';
+import { ArrowRight } from '../../../assets/icons';
 
-import image1 from '../../../images/slider_image_1.jpg';
-import image2 from '../../../images/slider_image_2.jpg';
-import image3 from '../../../images/slider_image_3.jpg';
-import image4 from '../../../images/slider_image_4.jpg';
+import image1 from '../../../assets/images/slider_image_1.jpg';
+import image2 from '../../../assets/images/slider_image_2.jpg';
+import image3 from '../../../assets/images/slider_image_3.jpg';
+import image4 from '../../../assets/images/slider_image_4.jpg';
 
 const Slider = () => {
     
@@ -90,14 +92,10 @@ const Slider = () => {
     return (
       <div className="slider" ref={myRef}>
         <button onClick={() => prevSlide()} className="slider__control slider__control-left" aria-label="change slide to the left">
-            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 1L1 10L9 19" stroke="#EEEEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <ArrowLeft/>
         </button>
         <button onClick={() => nextSlide()} className="slider__control slider__control-right" aria-label="change slide to the right">
-            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L9 10L1 19" stroke="#EEEEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <ArrowRight/>
         </button>
         <SliderContent
           translate={translate}

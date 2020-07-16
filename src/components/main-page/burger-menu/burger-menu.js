@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import './burger-menu.scss';
 
+import { BurgerOpened, BurgerClosed } from '../../../assets/icons';
+
 const BurgerMenu = () => {
+    const toggleMenu = (status) => {
+        if(status === true) {
+            setMenuOpened(false);
+            
+        } else {
+            setMenuOpened(true)
+        }
+    }
     const [menuOpened, setMenuOpened] = useState(false);
-    if(menuOpened) {
+    const burgerMenuClass = menuOpened ? 'burger-menu__opened': 'burger-menu__closed';
+    const burgerCrossIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--opened' : 'burger-menu__icon burger-menu__icon--closed'
+    const burgerIconClass = menuOpened ? 'burger-menu__icon burger-menu__icon--closed' : 'burger-menu__icon burger-menu__icon--opened'
         return (
             <div className="burger-menu container">
-                <button onClick={() => setMenuOpened(false)} className="burger-menu__button" aria-label="menu button">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 8L8 24" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M8 8L24 24" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                <button onClick={() => toggleMenu(menuOpened)} className="burger-menu__button" aria-label="menu button">
+                    <BurgerClosed styles={burgerCrossIconClass}/>
+                    <BurgerOpened styles={burgerIconClass}/>
                 </button>
                 <button className="burger-menu__lang" aria-label="change language">Eng</button>
-                <div className="burger-menu__opened">
+                <div className={burgerMenuClass}>
                     <menu className="burger-menu__info">
                         <ul className="burger-menu__list">
                             <li className="burger-menu__item">Парковка</li>
@@ -46,19 +56,5 @@ const BurgerMenu = () => {
                 </div>
             </div>
         )
-    }
-    return (
-        <div className="burger-menu container">
-                <button onClick={() => setMenuOpened(true)} className="burger-menu__button" aria-label="menu button">
-                    <svg className="burger-menu__closed-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 16H28" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M4 8H28" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M4 24H28" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                </button>
-                <button className="burger-menu__lang burger-menu__closed-lang" aria-label="change language">Eng</button>
-        </div>
-    )
-
 }
 export default BurgerMenu;

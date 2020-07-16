@@ -3,11 +3,9 @@ import React from 'react'
 
 
 const Dot = ({ active, changeSlide }) => {
-    const dotBackground = {
-        background: `${active ? '#0EC261' : 'white'}`
-    }
+    const dotClass = active ? 'slider__radio slider__radio--active' : 'slider__radio';
     return (
-        <button className="slider__radio" style={dotBackground} aria-label="change slide" onClick={changeSlide}></button>
+        <button className={dotClass} aria-label="change slide" onClick={changeSlide}></button>
     )
 }
 

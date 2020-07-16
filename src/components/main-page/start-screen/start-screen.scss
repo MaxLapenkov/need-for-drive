@@ -1,5 +1,5 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
 
 .start-screen {
     flex: 1 1 688px;
@@ -53,10 +53,6 @@
     }
     &__city{
         margin-left: 7.5px;
-        cursor: pointer;
-        &:hover {
-            color: $main-accent;
-        }
     }
 }
 .content {

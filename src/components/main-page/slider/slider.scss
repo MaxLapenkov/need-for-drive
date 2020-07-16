@@ -1,10 +1,15 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
 .slider {
     background-color: $black-background;
     flex: 1 2 688px;
     overflow: hidden;
     position: relative;
+    &__content {
+        height: 100%;
+        display: flex;
+        background-color: $black-background;
+    }
     &__item {
         display: flex;
         flex-direction: column;
@@ -12,7 +17,10 @@
         padding-left: 128px;
         padding-right: 128px;
         height: 100%;
-        width: 100%;    
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;  
     }
     &__header{
         @include textSettings($medium, 40px, 47px, #fff);
@@ -96,9 +104,13 @@
         height: 12px;
         border: none;
         border-radius: 50%;
+        background-color: white;
         &:nth-child(1) {
             margin-left: 0;
         }
+    }
+    &__radio--active {
+        background-color: $main-accent;
     } 
 }
 @media screen and (max-width: $desktop-min-width) {
