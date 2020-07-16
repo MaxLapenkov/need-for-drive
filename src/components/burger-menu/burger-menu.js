@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './burger-menu.scss';
 
-import { BurgerOpened, BurgerClosed } from '../../../assets/icons';
+import { BurgerOpened, BurgerClosed } from '../../assets/icons';
 
 const BurgerMenu = ( {substrate} ) => {
     const toggleMenu = (status) => {
         if(status === true) {
             setMenuOpened(false);
-            setBurgerIconClass('burger-menu__icon burger-menu__icon--opened');
+            setBurgerIconClass('burger-menu__icon burger-menu__icon--opened burger-menu__icon--burger-mobile');
             setBurgerCrossIconClass('burger-menu__icon burger-menu__icon--closed')
         } else {
             setMenuOpened(true)
@@ -16,7 +16,7 @@ const BurgerMenu = ( {substrate} ) => {
         }
     }
     const [menuOpened, setMenuOpened] = useState(false);
-    const [burgerIconClass, setBurgerIconClass] = useState('burger-menu__icon');
+    const [burgerIconClass, setBurgerIconClass] = useState('burger-menu__icon burger-menu__icon--burger-mobile');
     const [burgerCrossIconClass, setBurgerCrossIconClass] = useState('burger-menu__icon--hidden');
     const burgerMenuClass = menuOpened ? 'burger-menu__opened': 'burger-menu__closed';
     

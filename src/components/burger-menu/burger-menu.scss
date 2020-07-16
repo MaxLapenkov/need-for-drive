@@ -1,5 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
 .burger-menu {
     flex: 0 0 64px;
     padding-left: 16px;
@@ -49,6 +49,7 @@
         }
     }
     
+    
     &__lang {
         cursor: pointer;
         background-color: inherit;
@@ -79,7 +80,7 @@
         flex-direction: row;
         position: absolute;
         content: "";
-        left: -100%;
+        left: -500%;
         right: 100%;
         top: 0;
         bottom: 0;
@@ -140,12 +141,14 @@
         padding: 0;
         align-self: flex-start;
         position: absolute;
+        &__icon--burger-mobile {
+            path {
+                stroke: black;
+            }
+        }
         &__button {
             margin-top: 20px;
             margin-left: 28px;
-        }
-        &__closed-svg path {
-            stroke: black;
         }
         &__lang {
             margin-left: 28px;

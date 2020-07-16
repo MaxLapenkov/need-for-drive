@@ -1,0 +1,32 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+        @include textSettings($bold, 30px, 35px, $main-accent);
+    }
+    &__location {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include textSettings($regular, 14px, 16px, $dark-gray);
+    }
+    &__city{
+        margin-left: 7.5px;
+    }
+}
+@media screen and (max-width: $mobile-width) {
+    .header{
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: flex-end;
+        margin-right: 16px;
+        &__location {
+            margin-top: 8px;
+        }
+    }
+}

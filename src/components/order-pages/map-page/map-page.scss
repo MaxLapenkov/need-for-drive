@@ -1,0 +1,8 @@
+.map-page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    &__wrapper {
+        flex-grow: 1;
+    }
+}
