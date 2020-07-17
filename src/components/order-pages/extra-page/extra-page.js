@@ -5,7 +5,7 @@ import Navigation from '../navigation';
 import { links, cars } from '../../../services'
 import { Link } from 'react-router-dom'
 import '../order-page.scss'
-import './model-page.scss'
+import './extra-page.scss'
 
 const Model = ({car, activeModel, setModel, index}) => {
     const modelClass = activeModel ? "model-page__model model-page__model--active" : "model-page__model";

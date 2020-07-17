@@ -46,10 +46,10 @@ const MapPage = () => {
                             <img className="map-page__map" src={map} alt="карта"></img>
                         </div>
                         <div className="order-page__right-container">
-                            <div className="order-page__location">
-                                <div className="order-page__location-title">Пункт выдачи</div>
-                                <div className="order-page__location-dash"></div>
-                                <div className="order-page__location-value">Ульяновск Нариманова 42</div>
+                            <div className="order-page__info">
+                                <div className="order-page__info-title">Пункт выдачи</div>
+                                <div className="order-page__info-dash"></div>
+                                <div className="order-page__info-value">Ульяновск Нариманова 42</div>
                             </div>
                             <div className="order-page__price">
                                 <span className="order-page__price-header">Цена: </span>

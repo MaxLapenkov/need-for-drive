@@ -51,19 +51,20 @@
         min-height: 100%;
         
     }
-    &__location {
+    &__info {
         @include textSettings($regular, 14px, 16px, $main-black);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-end;
+        margin-bottom: 16px;
     }
-    &__location-value {
+    &__info-value {
         flex-grow: 1;
         color: $dark-gray;
         max-width: 110px;
     }
-    &__location-dash {
+    &__info-dash {
         flex-grow: 1;
         border-bottom: 1px dotted $dark-gray;
         margin-left: 12px;
@@ -101,6 +102,53 @@
     }
     &__cross--hidden {
         display: none;
+    }
+    &__settings {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 48px;
+    }
+    &__radio {
+        margin-right: 16px;
+        
+        label {
+            vertical-align: middle;
+        }
+    }
+    &__custom-radio {
+        margin-right: 8px;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            @include textSettings($regular, 14px, 14px, $dark-gray);
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                flex-shrink: 0;
+                flex-grow: 0;
+                border: 1px solid $dark-gray;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+        }
+        &:not(:disabled):not(:checked)+label:hover::before {
+            border-color: $main-black;
+          }
+        &:checked+label{
+            color: $main-black;
+            &::before {
+                width: 8px;
+                height: 8px;
+                border: 3px solid $main-accent;
+                border-radius: 50%;
+            }
+        }
     }
 }
 
