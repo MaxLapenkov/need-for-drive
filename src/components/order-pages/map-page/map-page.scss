@@ -1,8 +1,26 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
 .map-page {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    &__wrapper {
-        flex-grow: 1;
+
+    &__delivery {
+        margin-top: 13px;
+    }
+    
+    &__heading {
+        @include textSettings($regular, 14px, 16px, $main-black);
+        margin-top: 45px;
+        margin-bottom: 16px;
+    }
+    &__map {
+        max-width: 736px;
+    }
+
+}
+@media screen and (max-width: $desktop-min-width) {
+    .map-page {
+        &__map {
+            width: 100%;
+        }
     }
 }
+

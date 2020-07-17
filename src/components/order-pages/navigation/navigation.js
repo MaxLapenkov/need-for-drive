@@ -3,14 +3,14 @@ import { NavArrow } from '../../../assets/icons'
 import './navigation.scss'
 import { Link } from 'react-router-dom'
 
-const LinkToPage = ( {active, unlocked, text, address} ) => {
+const LinkToPage = ( {active, unlocked, text, address, index} ) => {
     let linkClass = 'navigation__item';
         if (unlocked) {
             linkClass = 'navigation__item navigation__item--unlocked'
         } else if (active) {
             linkClass = 'navigation__item navigation__item--active'
         }
-    if(!active) {
+    if(index !== 0) {
         return (
             <li className={linkClass}>
                 <NavArrow styles="navigation__item-icon"/>
@@ -39,10 +39,10 @@ const Navigation = ({ activeIndex, unlockedIndexes, links }) => {
     
     return (
         <nav className="navigation">
-            <ul className="navigation__list order-page__container">
+            <ul className="navigation__list">
             {           
                 links.map((link, i) => (
-                    <LinkToPage key={i} active={activeIndex === i} unlocked={checkUnlockedIndexes(unlockedIndexes, i)} text={link.link} address={link.address}/>
+                    <LinkToPage key={i} active={activeIndex === i} unlocked={checkUnlockedIndexes(unlockedIndexes, i)} text={link.link} address={link.address} index={i}/>
                 ))
             }
             </ul>
