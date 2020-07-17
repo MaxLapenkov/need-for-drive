@@ -23,7 +23,7 @@ const ExtraPage = () => {
 
 
     return (
-        <section className="map-page order-page">
+        <section className="extra-page order-page">
             <h1 className="visually-hidden">Станица заказа - выбор дополнительных услуг</h1>
             <BurgerMenu/>
                 <div className="order-page__wrapper">

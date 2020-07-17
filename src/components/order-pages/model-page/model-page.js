@@ -19,7 +19,7 @@ const Model = ({car, activeModel, setModel, index}) => {
 }
 
 const ModelPage = () => {
-    const [nextPage, setNextPage] = useState(false);
+    const [nextPage, setNextPage] = useState(true);
     const [activeModel, setActiveModel] = useState(null);
     const unclokedIndexes = nextPage ? [0, 2] : [0];
     const buttonClass = nextPage ? 'button order-page__button' : 'button button--disabled order-page__button'

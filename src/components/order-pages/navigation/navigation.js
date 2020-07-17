@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const LinkToPage = ( {active, unlocked, text, address, index} ) => {
     let linkClass = 'navigation__item';
-        if (unlocked) {
+        if (unlocked && !active) {
             linkClass = 'navigation__item navigation__item--unlocked'
         } else if (active) {
             linkClass = 'navigation__item navigation__item--active'

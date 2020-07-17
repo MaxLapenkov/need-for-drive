@@ -1,0 +1,85 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.final-page {
+    position: relative;
+    &__modal {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    &__modal--closed {
+        top: -500%;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        transition: 0.5s;
+    }
+    &__modal-controls {
+        margin-top: 32px;
+    }
+    &__modal-header {
+        @include textSettings($regular, 24px, 28px, $main-black);
+    }
+    &__modal-button {
+        max-width: 177px;
+        padding: 11px 35px;
+    }
+    &__modal-button--back {
+        margin-left: 16px;
+        @include buttonColor(hsl(32, 59%, 18%), hsl(335, 82%, 26%), #fff);
+        &:hover,
+        &:active {
+            @include buttonColor(hsl(32, 59%, 8%), hsl(335, 82%, 16%), #fff);
+        }
+    }
+    &__order {
+        display: flex;
+    }
+
+    &__order-header {
+        @include textSettings($regular, 18px, 21px, $main-black);
+    }
+    &__order-plate {
+        @include textSettings($regular, 14px, 16px, $main-black);
+        border: 1px solid $dark-gray;
+        width: 100px;
+        padding: 2px 4px;
+        border-radius: 4px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    &__order-info {
+        @include textSettings($bold, 14px, 16px, $main-black);
+        margin-bottom: 8px;
+    }
+    &__order-value {
+        @include textSettings($regular, 14px, 16px, $main-black);
+    }
+    &__order-image {
+        display: block;
+        margin-left: 30%;
+        max-width: 256px;
+    }
+}
+@media screen and (max-width: $mobile-width) {
+    .final-page {
+        &__order{
+            flex-direction: column;
+        }
+        &__order-image {
+            margin-left: 0;
+        }
+    }
+    
+}
