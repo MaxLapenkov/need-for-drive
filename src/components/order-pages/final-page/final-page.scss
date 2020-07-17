@@ -68,8 +68,29 @@
     }
     &__order-image {
         display: block;
-        margin-left: 30%;
+        margin-left: 20%;
         max-width: 256px;
+        max-height: 117px;
+    }
+    &__order-alert {
+        @include textSettings($regular, 24px, 28px, $main-black);
+        margin-bottom: 16px;
+    }
+    &__number {
+        border-top: 1px solid $light-gray;
+        border-bottom: 1px solid $light-gray;
+        
+    }
+    &__header {
+        display: block;
+        @include textSettings($bold, 14px, 16px, $main-black);
+        flex-grow: 1;
+        max-width: 1376px;
+        padding-left: 64px;
+        padding-right: 64px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width: $mobile-width) {
