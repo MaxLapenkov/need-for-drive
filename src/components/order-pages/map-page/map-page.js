@@ -16,7 +16,7 @@ const MapPage = () => {
     const clearCity = city.length > 0 ? 'order-page__cross' : 'order-page__cross--hidden';
     const clearDelivery = delivery.length > 0 ? 'order-page__cross' : 'order-page__cross--hidden';
 
-    const [nextPage, setNextPage] = useState(true);
+    const nextPage = true;
     const unclokedIndexes = nextPage ? [1] : [0];
     const buttonClass = nextPage ? 'button order-page__button' : 'button button--disabled order-page__button'
 

@@ -75,7 +75,7 @@ const ModelPage = () => {
                                 от <span className="order-page__price-from"> 10000 </span>
                                 до <span className="order-page__price-to"> 32 000 &#8381;</span>
                             </div>
-                            <Link to="/order/addition" className={buttonClass}>Дополнительно</Link>
+                            <Link to="/order/extra" className={buttonClass}>Дополнительно</Link>
                         </div>
                     </div>
                     <footer className="order-page__footer"></footer>        
