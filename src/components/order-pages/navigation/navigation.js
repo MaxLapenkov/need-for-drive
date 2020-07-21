@@ -42,7 +42,7 @@ const Navigation = ({ activeIndex, unlockedIndexes, links }) => {
             <ul className="navigation__list">
             {           
                 links.map((link, i) => (
-                    <LinkToPage key={i} active={activeIndex === i} unlocked={checkUnlockedIndexes(unlockedIndexes, i)} text={link.link} address={link.address} index={i}/>
+                    <LinkToPage key={link.link} active={activeIndex === i} unlocked={checkUnlockedIndexes(unlockedIndexes, i)} text={link.link} address={link.address} index={i}/>
                 ))
             }
             </ul>
