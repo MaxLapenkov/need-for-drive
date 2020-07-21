@@ -3,12 +3,36 @@ import BurgerMenu from '../../burger-menu';
 import Header from '../../header';
 import Navigation from '../navigation';
 import { OrderCross } from '../../../assets/icons';
-import { links } from '../../../services'
+import { links, carColors, tarifs, additions } from '../../../services'
 import { Link } from 'react-router-dom'
 import '../order-page.scss'
 import './extra-page.scss'
 
+const ColorRadio = ({color}) => {
+    return (
+        <div className="order-page__radio">
+            <input type="radio" className="order-page__custom-radio" id={color.id} name="color" value={color.id}/>
+            <label htmlFor={color.id}>{color.name}</label>
+        </div>
+    )
+}
 
+const Tarif = ({tarif}) => {
+    return (
+        <div className="order-page__radio extra-page__radio">
+            <input type="radio" className="order-page__custom-radio" id={tarif.id} name="tarif" value={tarif.id}/>
+            <label htmlFor={tarif.id}>{tarif.name}, {tarif.price}</label>
+        </div>
+    )
+}
+const Additions = ({addition}) => {
+    return (
+        <div className="order-page__checkbox extra-page__checkbox">
+            <input type="checkbox" className="order-page__custom-checkbox" id={addition.id} name={addition.id} value={addition.id}/>
+            <label htmlFor={addition.id}>{addition.name}, {addition.price}</label>
+        </div>
+    )
+}
 
 const ExtraPage = () => {
 
@@ -35,18 +59,11 @@ const ExtraPage = () => {
                         <div className="order-page__left-container">
                             <h2 className="extra-page__heading">Цвет</h2>
                             <div className="order-page__settings">
-                                <div className="order-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="all" name="color" value="all"/>
-                                    <label htmlFor="all">Любой</label>
-                                </div>
-                                <div className="order-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="red" name="color" value="red"/>
-                                    <label htmlFor="red">Красный</label>
-                                </div>
-                                <div className="order-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="light-blue" name="color" value="light-blue"/>
-                                    <label htmlFor="light-blue">Голубой</label>
-                                </div>
+                                {           
+                                    carColors.map((color) => (
+                                        <ColorRadio key={color.name} color={color}/>
+                                    ))
+                                }
                             </div>
                             <div className="order-page__date">
                                 <h2 className="extra-page__heading">Дата аренды</h2>
@@ -63,29 +80,19 @@ const ExtraPage = () => {
                             </div>
                             <div className="order-page__tarif">
                             <h2 className="extra-page__heading">Тариф</h2>
-                            <div className="order-page__radio extra-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="minute" name="tarif" value="all"/>
-                                    <label htmlFor="minute">Поминутно, 7₽/мин</label>
-                                </div>
-                                <div className="order-page__radio extra-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="daily" name="tarif" value="red"/>
-                                    <label htmlFor="daily">На сутки, 1999 ₽/сутки</label>
-                                </div>
+                            {           
+                                    tarifs.map((tarif) => (
+                                        <Tarif key={tarif.name} tarif={tarif}/>
+                                    ))
+                            }
                             </div>
                             <div className="order-page__additions">
                                 <h2 className="extra-page__heading">Доп услуги</h2>
-                                <div className="order-page__checkbox extra-page__checkbox">
-                                    <input type="checkbox" className="order-page__custom-checkbox" id="tank" name="tank" value="tank"/>
-                                    <label htmlFor="tank">Полный бак, 500р</label>
-                                </div>
-                                <div className="order-page__checkbox extra-page__checkbox">
-                                    <input type="checkbox" className="order-page__custom-checkbox" id="chair" name="chair" value="chair"/>
-                                    <label htmlFor="chair">Детское кресло, 200р</label>
-                                </div>
-                                <div className="order-page__checkbox extra-page__checkbox">
-                                    <input type="checkbox" className="order-page__custom-checkbox" id="wheel" name="wheel" value="wheel"/>
-                                    <label htmlFor="wheel">Правый руль, 1600р</label>
-                                </div>
+                                {           
+                                    additions.map((addition) => (
+                                        <Additions key={addition.name} addition={addition}/>
+                                    ))
+                                }
                             </div>
                         </div>
                         <div className="order-page__right-container">

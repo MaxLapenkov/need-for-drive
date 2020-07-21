@@ -60,4 +60,8 @@ h1, h2, h3, p{
     height: 1px;
     margin: -1px;
   }
-
+  @media screen and (max-width: $mobile-width) {
+      .container{ 
+          padding: 0;
+      }
+  }

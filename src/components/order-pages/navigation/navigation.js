@@ -13,7 +13,7 @@ const LinkToPage = ( {active, unlocked, text, address, index} ) => {
     if(index !== 0) {
         return (
             <li className={linkClass}>
-                <NavArrow styles="navigation__item-icon"/>
+                <NavArrow classes="navigation__item-icon"/>
                 <Link to={address}>{text}</Link>
             </li>
         )

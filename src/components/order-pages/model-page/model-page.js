@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import BurgerMenu from '../../burger-menu';
 import Header from '../../header';
 import Navigation from '../navigation';
-import { links, cars } from '../../../services'
+import { links, cars, modelTypes } from '../../../services'
 import { Link } from 'react-router-dom'
 import '../order-page.scss'
 import './model-page.scss'
@@ -16,6 +16,15 @@ const Model = ({car, activeModel, setModel, index}) => {
                 <img className="model-page__model-image" src={car.thumbnail} alt="Иконка машины"/>
             </div>
         )
+}
+
+const ModelRadio = ({modelType}) => {
+    return (
+        <div className="order-page__radio">
+            <input type="radio" className="order-page__custom-radio" id={modelType.id} name="radio" value={modelType.id}/>
+            <label htmlFor={modelType.id}>{modelType.name}</label>
+        </div>
+    )
 }
 
 const ModelPage = () => {
@@ -38,18 +47,11 @@ const ModelPage = () => {
                     <div className=" order-page__container order-page__content">
                         <div className="order-page__left-container">
                             <div className="order-page__settings">
-                                <div className="order-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="all" name="radio" value="all"/>
-                                    <label htmlFor="all">Все модели</label>
-                                </div>
-                                <div className="order-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="eco" name="radio" value="eco"/>
-                                    <label htmlFor="eco">Эконом</label>
-                                </div>
-                                <div className="order-page__radio">
-                                    <input type="radio" className="order-page__custom-radio" id="prem" name="radio" value="prem"/>
-                                    <label htmlFor="prem">Премиум</label>
-                                </div>
+                                {           
+                                    modelTypes.map((type) => (
+                                        <ModelRadio key={type.name} modelType={type}/>
+                                    ))
+                                }
                             </div>
                             <div className="model-page__model-container">
                             {           

@@ -2,40 +2,55 @@ import React, { useState } from 'react';
 import './burger-menu.scss';
 
 import { BurgerOpened, BurgerClosed } from '../../assets/icons';
+import { burgerMenuItems } from '../../services';
+
+const MenuItem = ({ item }) => {
+    return (
+        <li className="burger-menu__item">{item}</li>
+    )
+}
 
 const BurgerMenu = ( {substrate} ) => {
     const toggleMenu = (status) => {
+        setmenuTriggered(true);
         if(status === true) {
             setMenuOpened(false);
-            setBurgerIconClass('burger-menu__icon burger-menu__icon--opened burger-menu__icon--burger-mobile');
-            setBurgerCrossIconClass('burger-menu__icon burger-menu__icon--closed')
         } else {
             setMenuOpened(true)
-            setBurgerIconClass('burger-menu__icon burger-menu__icon--closed')
-            setBurgerCrossIconClass('burger-menu__icon burger-menu__icon--opened')
         }
     }
     const [menuOpened, setMenuOpened] = useState(false);
-    const [burgerIconClass, setBurgerIconClass] = useState('burger-menu__icon burger-menu__icon--burger-mobile');
-    const [burgerCrossIconClass, setBurgerCrossIconClass] = useState('burger-menu__icon--hidden');
+    const [menuTriggered, setmenuTriggered] = useState(false);
     const burgerMenuClass = menuOpened ? 'burger-menu__opened': 'burger-menu__closed';
-    
+
+    let burgerIconClass = 'burger-menu__icon burger-menu__icon--burger-mobile';
+    let burgerCrossIconClass = 'burger-menu__icon--hidden';
+
     const substrateClass = substrate ? 'burger-menu__substrate' : '';
+
+    if(menuOpened && menuTriggered) {
+        burgerIconClass = 'burger-menu__icon burger-menu__icon--closed'
+        burgerCrossIconClass = 'burger-menu__icon burger-menu__icon--opened'
+    } else if(!menuOpened && menuTriggered) {
+        burgerIconClass = 'burger-menu__icon burger-menu__icon--opened burger-menu__icon--burger-mobile'
+        burgerCrossIconClass = 'burger-menu__icon burger-menu__icon--closed'
+    }
 
         return (
             <div className="burger-menu container">
                 <button onClick={() => toggleMenu(menuOpened)} className="burger-menu__button" aria-label="menu button">
-                    <BurgerClosed styles={burgerCrossIconClass}/>
-                    <BurgerOpened styles={burgerIconClass}/>
+                    <BurgerClosed classes={burgerCrossIconClass}/>
+                    <BurgerOpened classes={burgerIconClass}/>
                 </button>
                 <button className="burger-menu__lang" aria-label="change language">Eng</button>
                 <div className={burgerMenuClass}>
                     <menu className="burger-menu__info">
                         <ul className="burger-menu__list">
-                            <li className="burger-menu__item">Парковка</li>
-                            <li className="burger-menu__item">Страховка</li>
-                            <li className="burger-menu__item">Бензин</li>
-                            <li className="burger-menu__item">Обслуживание</li>
+                            {           
+                                burgerMenuItems.map((item) => (
+                                    <MenuItem key={item} item={item}/>
+                                ))
+                            }
                         </ul>
                         <div className="burger-menu__social">
                             <a href="https://telegram.org/" className="burger-menu__link">

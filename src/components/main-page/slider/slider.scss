@@ -75,12 +75,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        outline: none;
         &:hover{
             background-color: rgba(14, 194, 97, 0.2);
         }
         &:focus {
-            outline: 2px solid white;
+            outline: none;
         }
     }
     &__control-left {
