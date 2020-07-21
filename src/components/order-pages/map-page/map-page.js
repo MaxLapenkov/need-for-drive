@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import '../order-page.scss' 
 import './map-page.scss'
 
-import map from '../../../assets/images/map.png'
+import map from '@images/map.png'
 
 const MapPage = () => {
 	const [city, setCity] = useState('')

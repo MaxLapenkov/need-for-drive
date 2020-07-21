@@ -1,7 +1,7 @@
-import car1 from '../assets/images/car_1.png'
-import car2 from '../assets/images/car_2.png'
-import car3 from '../assets/images/car_3.png'
-import car4 from '../assets/images/car_4.png'
+import car1 from '@images/car_1.png'
+import car2 from '@images/car_2.png'
+import car3 from '@images/car_3.png'
+import car4 from '@images/car_4.png'
 
 const cars = [
 	{
