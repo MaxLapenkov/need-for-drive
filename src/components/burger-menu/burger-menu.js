@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './burger-menu.scss';
 
 import { BurgerOpened, BurgerClosed, Telegram, Facebook, Instagram } from '../../assets/icons';
-import { burgerMenuItems } from '../../services';
+import { burgerMenuItems } from '../../constants';
 
 const MenuItem = ({ item }) => {
     return (

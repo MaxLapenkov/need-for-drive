@@ -64,6 +64,13 @@
     .navigation {
         &__list {
             justify-content: center;
+            flex-direction: column;
+        }
+        &__item a{
+            margin-left: 0;
+        }
+        &__item-icon {
+            display: none;
         }
     }
 }

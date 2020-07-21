@@ -3,7 +3,7 @@ import BurgerMenu from '../../burger-menu';
 import Header from '../../header';
 import Navigation from '../navigation';
 import { OrderCross } from '../../../assets/icons';
-import { links } from '../../../services'
+import { links } from '../../../constants'
 import { Link } from 'react-router-dom'
 import '../order-page.scss'
 import './map-page.scss'

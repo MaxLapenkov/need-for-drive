@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import BurgerMenu from '../../burger-menu';
 import Header from '../../header';
 import Navigation from '../navigation';
-import { links } from '../../../services';
-import  cars  from '../../../services/cars'
+import { links, cars } from '../../../constants';
 import '../order-page.scss';
 import './final-page.scss';
 

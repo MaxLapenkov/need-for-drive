@@ -15,6 +15,7 @@ body {
 }
 .button {
     @include buttonColor($main-accent-hsl, $additional-accent-hsl, #fff);
+    text-align: center;
     border-radius: 8px;
     border: none;
     padding: 11px 48px;
