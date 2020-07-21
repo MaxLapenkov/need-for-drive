@@ -1,5 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
 .slider {
     background-color: $black-background;
     flex: 1 2 688px;
@@ -75,11 +75,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        outline: none;
         &:hover{
             background-color: rgba(14, 194, 97, 0.2);
         }
         &:focus {
-            outline: none;
+            outline: 2px solid white;
         }
     }
     &__control-left {
