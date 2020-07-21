@@ -1,18 +1,25 @@
 * {
     box-sizing: border-box;
 }
-html, body, #root, .app {
+
+html,
+body,
+#root,
+.app {
     height: 100%;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     color: $main-black;
 }
+
 .container {
     min-height: 100%;
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
 .button {
     @include buttonColor($main-accent-hsl, $additional-accent-hsl, #fff);
     text-align: center;
@@ -20,49 +27,64 @@ body {
     border: none;
     padding: 11px 48px;
     cursor: pointer;
+
     &:hover {
         @include buttonColor($main-accent-hsl-10, $additional-accent-hsl-10, #fff);
     }
+
     &:active {
         @include buttonColor($main-accent-hsl-20, $additional-accent-hsl-20, #fff);
     }
+
     &:disabled {
         background: $light-gray;
     }
 }
+
 .button--disabled {
     background: $light-gray;
-    display: inline-block;  /* For IE11/ MS Edge bug */
+    display: inline-block;
+    /* For IE11/ MS Edge bug */
     pointer-events: none;
 }
+
 a {
     text-decoration: none;
     color: $main-black;
+
     &:hover,
     &:active {
         color: $main-accent;
     }
+
     &:disabled {
         color: $dark-gray;
     }
 }
+
 ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-h1, h2, h3, p{
+
+h1,
+h2,
+h3,
+p {
     margin: 0;
 }
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
-  }
-  @media screen and (max-width: $mobile-width) {
-      .container{ 
-          padding: 0;
-      }
-  }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .container {
+        padding: 0;
+    }
+}

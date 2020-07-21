@@ -1,15 +1,18 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
+
 .slider {
     background-color: $black-background;
     flex: 1 2 688px;
     overflow: hidden;
     position: relative;
+
     &__content {
         height: 100%;
         display: flex;
         background-color: $black-background;
     }
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -20,48 +23,59 @@
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;  
+        background-position: center;
     }
-    &__header{
+
+    &__header {
         @include textSettings($medium, 40px, 47px, #fff);
         margin-bottom: 8px;
     }
+
     &__info {
         @include textSettings($light, 24px, 22px, $light-gray);
         margin-bottom: 32px;
     }
+
     &__button {
         @include buttonColor($additional-accent-hsl-10, $main-accent-hsl-10, #fff);
         margin-bottom: 100px;
         align-self: flex-start;
         cursor: pointer;
         border-radius: 4px;
+
         &:hover,
         &:active {
             @include buttonColor($additional-accent-hsl-20, $main-accent-hsl-20, #fff);
         }
     }
+
     &__button--second {
         @include buttonColor(hsl(216, 59%, 18%), hsl(169, 82%, 26%), #fff);
+
         &:hover,
         &:active {
             @include buttonColor(hsl(216, 59%, 8%), hsl(169, 82%, 16%), #fff);
         }
     }
+
     &__button--third {
         @include buttonColor(hsl(32, 59%, 18%), hsl(335, 82%, 26%), #fff);
+
         &:hover,
         &:active {
             @include buttonColor(hsl(32, 59%, 8%), hsl(335, 82%, 16%), #fff);
         }
     }
+
     &__button--fourth {
         @include buttonColor(hsl(263, 59%, 18%), hsl(295, 82%, 26%), #fff);
+
         &:hover,
         &:active {
             @include buttonColor(hsl(263, 59%, 8%), hsl(295, 82%, 16%), #fff);
         }
-    } 
+    }
+
     &__control {
         z-index: 50;
         cursor: pointer;
@@ -75,21 +89,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        &:hover{
+
+        &:hover {
             background-color: rgba(14, 194, 97, 0.2);
         }
+
         &:focus {
             outline: none;
         }
     }
+
     &__control-left {
         top: 0;
         left: 0;
     }
+
     &__control-right {
         top: 0;
         right: 0;
     }
+
     &__radio-controls {
         position: absolute;
         content: "";
@@ -100,6 +119,7 @@
         justify-content: center;
         align-items: center;
     }
+
     &__radio {
         cursor: pointer;
         margin-left: 8px;
@@ -108,33 +128,40 @@
         border: none;
         border-radius: 50%;
         background-color: white;
+
         &:nth-child(1) {
             margin-left: 0;
         }
     }
+
     &__radio--active {
         background-color: $main-accent;
-    } 
+    }
 }
+
 @media screen and (max-width: $desktop-min-width) {
-    .slider{
+    .slider {
         &__header {
             font-size: 32px;
             line-height: 37px;
         }
+
         &__info {
             font-size: 22px;
             line-height: 22px;
         }
+
         &__control {
             width: 32px;
         }
+
         &__item {
             padding-left: 64px;
             padding-right: 64px;
         }
     }
 }
+
 @media screen and (max-width: $tablet-width) {
     .slider {
         display: none;

@@ -1,7 +1,9 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
+
 .final-page {
     position: relative;
+
     &__modal {
         position: absolute;
         content: "";
@@ -17,6 +19,7 @@
         align-items: center;
         transition: 0.5s;
     }
+
     &__modal--closed {
         top: -500%;
         bottom: 100%;
@@ -24,24 +27,30 @@
         right: 0;
         transition: 0.5s;
     }
+
     &__modal-controls {
         margin-top: 32px;
     }
+
     &__modal-header {
         @include textSettings($regular, 24px, 28px, $main-black);
     }
+
     &__modal-button {
         max-width: 177px;
         padding: 11px 35px;
     }
+
     &__modal-button--back {
         margin-left: 16px;
         @include buttonColor(hsl(32, 59%, 18%), hsl(335, 82%, 26%), #fff);
+
         &:hover,
         &:active {
             @include buttonColor(hsl(32, 59%, 8%), hsl(335, 82%, 16%), #fff);
         }
     }
+
     &__order {
         display: flex;
     }
@@ -49,6 +58,7 @@
     &__order-header {
         @include textSettings($regular, 18px, 21px, $main-black);
     }
+
     &__order-plate {
         @include textSettings($regular, 14px, 16px, $main-black);
         border: 1px solid $dark-gray;
@@ -58,28 +68,34 @@
         margin-top: 8px;
         margin-bottom: 8px;
     }
+
     &__order-info {
         @include textSettings($bold, 14px, 16px, $main-black);
         margin-bottom: 8px;
     }
+
     &__order-value {
         @include textSettings($regular, 14px, 16px, $main-black);
     }
+
     &__order-image {
         display: block;
         margin-left: 20%;
         max-width: 256px;
         max-height: 117px;
     }
+
     &__order-alert {
         @include textSettings($regular, 24px, 28px, $main-black);
         margin-bottom: 16px;
     }
+
     &__number {
         border-top: 1px solid $light-gray;
         border-bottom: 1px solid $light-gray;
-        
+
     }
+
     &__header {
         display: block;
         @include textSettings($bold, 14px, 16px, $main-black);
@@ -92,14 +108,16 @@
         margin: 0 auto;
     }
 }
+
 @media screen and (max-width: $mobile-width) {
     .final-page {
-        &__order{
+        &__order {
             flex-direction: column;
         }
+
         &__order-image {
             margin-left: 0;
         }
     }
-    
+
 }

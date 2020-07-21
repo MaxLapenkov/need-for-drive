@@ -1,8 +1,10 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
+
 .navigation {
     border-top: 1px solid $light-gray;
     border-bottom: 1px solid $light-gray;
+
     &__list {
         display: flex;
         flex-direction: row;
@@ -14,29 +16,35 @@
         margin: 0 auto;
         max-width: 1376px;
     }
+
     &__item {
         a {
             @include textSettings($bold, 14px, 16px, $dark-gray);
             margin-left: 16px;
-            display: inline-block;  /* For IE11/ MS Edge bug */
+            display: inline-block;
+            /* For IE11/ MS Edge bug */
             pointer-events: none;
             text-decoration: none;
         }
+
         &:nth-child(1) {
             a {
                 margin-left: 0;
             }
         }
     }
+
     &__item-icon {
         margin-left: 16px;
     }
+
     &__item--active {
         a {
             pointer-events: visible;
             color: $main-accent;
         }
     }
+
     &__item--unlocked {
         a {
             color: $main-black;
@@ -44,6 +52,7 @@
         }
     }
 }
+
 @media screen and (max-width: $desktop-min-width) {
     .navigation {
         &__list {
@@ -52,6 +61,7 @@
         }
     }
 }
+
 @media screen and (max-width: $tablet-width) {
     .navigation {
         &__list {
@@ -60,15 +70,18 @@
         }
     }
 }
+
 @media screen and (max-width: $mobile-width) {
     .navigation {
         &__list {
             justify-content: center;
             flex-direction: column;
         }
-        &__item a{
+
+        &__item a {
             margin-left: 0;
         }
+
         &__item-icon {
             display: none;
         }

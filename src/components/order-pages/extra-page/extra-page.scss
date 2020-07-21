@@ -1,19 +1,24 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
+
 .extra-page {
     &__label {
         max-width: 250px;
+
         &:not(:first-of-type) {
             margin-top: 13px;
         }
     }
+
     &__heading {
         @include textSettings($regular, 14px, 16px, $main-black);
         margin-bottom: 16px;
     }
+
     &__radio:not(:first-of-type) {
         margin-top: 8px;
     }
+
     &__checkbox:not(:first-of-type) {
         margin-top: 8px;
     }

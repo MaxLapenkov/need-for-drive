@@ -1,39 +1,48 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
+
 .model-page {
     &__model-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     &__model {
         cursor: pointer;
         width: 365px;
         border: 1px solid $light-gray;
         padding: 16px;
+
         &:hover {
             border-color: $dark-gray;
         }
     }
+
     &__model--active {
         border-color: $main-accent;
+
         &:hover {
             border-color: $main-accent;
         }
     }
+
     &__model-header {
         @include textSettings($regular, 18px, 21px, $main-black);
         text-transform: uppercase;
     }
+
     &__model-price {
         @include textSettings($regular, 14px, 16px, $dark-gray);
     }
+
     &__model-image {
         margin-top: 36px;
         display: block;
         margin-left: auto;
     }
 }
+
 @media screen and (max-width: $desktop-min-width) {
     .model-page {
         &__model-container {

@@ -1,5 +1,6 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
+
 .burger-menu {
     flex: 0 0 64px;
     padding-left: 16px;
@@ -9,6 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     &__button {
         cursor: pointer;
         padding: 0;
@@ -19,6 +21,7 @@
         width: 32px;
         height: 32px;
     }
+
     &__icon {
         position: absolute;
         top: 0;
@@ -27,39 +30,46 @@
         bottom: 0;
         transition: 0.6s;
     }
+
     &__icon--hidden {
         path {
             stroke-width: 0;
         }
     }
+
     &__icon--closed {
         animation: rotate_in_cw linear 0.25s;
         animation-fill-mode: forwards;
+
         path {
             animation: draw_out linear 0.5s;
             animation-fill-mode: forwards;
         }
     }
+
     &__icon--opened {
         animation: rotate_out_cw linear 0.25s;
         animation-fill-mode: forwards;
+
         path {
             animation: draw_in linear 0.5s;
             animation-fill-mode: forwards;
         }
     }
-    
-    
+
+
     &__lang {
         cursor: pointer;
         background-color: inherit;
         border: none;
         padding: 0;
         color: $main-accent;
-        &:hover{
+
+        &:hover {
             color: $light-gray;
         }
     }
+
     &__opened {
         background: rgba(21, 27, 31, 0.81);
         position: absolute;
@@ -73,6 +83,7 @@
         flex-direction: row;
         transition: 0.5s;
     }
+
     &__closed {
         background: rgba(21, 27, 31, 0.81);
         z-index: 100;
@@ -86,6 +97,7 @@
         bottom: 0;
         transition: 0.5s;
     }
+
     &__info {
         flex: 1 1 752px;
         z-index: 200;
@@ -100,41 +112,51 @@
         flex-direction: column;
         justify-content: center;
     }
+
     &__list {
         list-style: none;
         padding: 0;
         margin: 0;
     }
+
     &__item {
         @include textSettings($medium, 32px, 37px, #fff);
         margin-bottom: 24px;
         text-transform: uppercase;
         cursor: pointer;
+
         &:hover {
             color: $main-accent;
         }
     }
+
     &__substrate {
         flex: 1 2 688px;
     }
+
     &__social {
         margin-top: 8px;
     }
+
     &__link {
         margin-right: 24px;
-        svg:hover path{
+
+        svg:hover path {
             fill: $main-accent;
         }
     }
 }
+
 @media screen and (max-width: $tablet-width) {
     .burger-menu {
         flex: 0 0 85px;
+
         &__substrate {
             display: none;
         }
     }
 }
+
 @media screen and (max-width: $mobile-width) {
     .burger-menu {
         background-color: transparent;
@@ -147,22 +169,27 @@
                 stroke: black;
             }
         }
+
         &__button {
             margin-top: 20px;
             margin-left: 28px;
         }
+
         &__lang {
             margin-left: 28px;
             margin-bottom: 28px;
             z-index: 200;
         }
+
         &__closed-lang {
             display: none;
         }
+
         &__opened {
             min-width: 100vw;
             min-height: 100vh;
         }
+
         &__info {
             padding: 0;
             padding-left: 28px;
@@ -177,19 +204,39 @@
     0% {
         stroke-width: 0;
     }
-    100% { stroke-width: 3; }
-    
-  }
-  @keyframes draw_out {
-    0% { stroke-width: 3; }
-    100% { stroke-width: 0; }
-  }
 
-  @keyframes rotate_in_cw {
-    0% { transform: rotate(0deg) }
-    100% { transform: rotate(45deg) }
-  }
-  @keyframes rotate_out_cw {
-    0% { transform: rotate(45deg) }
-    100% { transform: rotate(0deg) }
-  }
+    100% {
+        stroke-width: 3;
+    }
+
+}
+
+@keyframes draw_out {
+    0% {
+        stroke-width: 3;
+    }
+
+    100% {
+        stroke-width: 0;
+    }
+}
+
+@keyframes rotate_in_cw {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes rotate_out_cw {
+    0% {
+        transform: rotate(45deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
