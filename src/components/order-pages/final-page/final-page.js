@@ -77,8 +77,9 @@ const FinalPage = () => {
                             </div>
                             <button className='button order-page__button order-page__button--back' onClick={() => setOrderApproved(false)}>Отменить</button>
                         </div>
+                        <footer className="order-page__footer"></footer>  
                     </div>
-                    <footer className="order-page__footer"></footer>        
+                          
                 </div>
         </section>
         )
