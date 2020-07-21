@@ -5,7 +5,7 @@ import Navigation from '../navigation'
 import { OrderCross } from '../../../assets/icons'
 import { links } from '../../../constants'
 import { Link } from 'react-router-dom'
-import '../order-page.scss'
+import '../order-page.scss' 
 import './map-page.scss'
 
 import map from '../../../assets/images/map.png'
