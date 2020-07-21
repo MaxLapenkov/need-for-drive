@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af55faf52656ac1ba2991df9dd4f85ae",
+    "revision": "535a8c1770523300199a9c3aa1a74e8f",
     "url": "/need-for-drive/index.html"
   },
   {
-    "revision": "dac01aa87e3e71d4555a",
-    "url": "/need-for-drive/static/css/main.00b3def9.chunk.css"
+    "revision": "0fb0e1babbd76a82b4d3",
+    "url": "/need-for-drive/static/css/main.1a1ed3d4.chunk.css"
   },
   {
-    "revision": "68bbc40bc147aceda9b4",
-    "url": "/need-for-drive/static/js/2.4ea700cd.chunk.js"
+    "revision": "70b62322119270591063",
+    "url": "/need-for-drive/static/js/2.3a35802f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/need-for-drive/static/js/2.4ea700cd.chunk.js.LICENSE.txt"
+    "url": "/need-for-drive/static/js/2.3a35802f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dac01aa87e3e71d4555a",
-    "url": "/need-for-drive/static/js/main.6fae897d.chunk.js"
+    "revision": "0fb0e1babbd76a82b4d3",
+    "url": "/need-for-drive/static/js/main.842e4c17.chunk.js"
   },
   {
     "revision": "d626b68bd1aca0cbff82",
@@ -38,6 +38,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "11eabca2251325cfc5589c9c6fb57b46",
     "url": "/need-for-drive/static/media/Roboto-Regular.11eabca2.ttf"
+  },
+  {
+    "revision": "58e1a40d46f93cd9be111f7948a8758a",
+    "url": "/need-for-drive/static/media/car_1.58e1a40d.png"
+  },
+  {
+    "revision": "444f21ad21b27384c41079e4902d2716",
+    "url": "/need-for-drive/static/media/car_2.444f21ad.png"
+  },
+  {
+    "revision": "1e2fee7676ee7836e09aa70ac3690547",
+    "url": "/need-for-drive/static/media/car_3.1e2fee76.png"
+  },
+  {
+    "revision": "1e63c3251e4bef6a61d5221be2979314",
+    "url": "/need-for-drive/static/media/car_4.1e63c325.png"
+  },
+  {
+    "revision": "ee33b0c5076045447e39a272c446f10b",
+    "url": "/need-for-drive/static/media/checkbox.ee33b0c5.svg"
+  },
+  {
+    "revision": "8cf6780240016607a43ee08d19d4c0a0",
+    "url": "/need-for-drive/static/media/map.8cf67802.png"
   },
   {
     "revision": "d47597e1ebe2b90e1f6d8ee01ea432f6",
