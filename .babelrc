@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@icons": "./src/assets/icons",
+          "@images": "./src/assets/images",
+          "@constants": "./src/constants"
+        }
+      }
+    ]
+  ]
+}

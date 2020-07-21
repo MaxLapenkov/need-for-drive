@@ -7,11 +7,11 @@ import tarifs from './tarifs'
 import additions from './additions'
 
 export {
-    links,
-    cars,
-    burgerMenuItems,
-    modelTypes,
-    carColors,
-    tarifs,
-    additions
+	links,
+	cars,
+	burgerMenuItems,
+	modelTypes,
+	carColors,
+	tarifs,
+	additions,
 }

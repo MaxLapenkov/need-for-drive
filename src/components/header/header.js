@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.scss'
-import { IconLocation } from '../../assets/icons'
+import { IconLocation } from '@icons'
 import { Link } from 'react-router-dom'
 
 const Header = () => {

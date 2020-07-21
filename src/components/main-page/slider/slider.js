@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import './slider.scss'
 import SliderContent from './slider-content'
 import Dots from './dots'
-import { ArrowLeft } from '../../../assets/icons'
-import { ArrowRight } from '../../../assets/icons'
+import { ArrowLeft } from '@icons'
+import { ArrowRight } from '@icons'
 
-import image1 from '../../../assets/images/slider_image_1.jpg'
-import image2 from '../../../assets/images/slider_image_2.jpg'
-import image3 from '../../../assets/images/slider_image_3.jpg'
-import image4 from '../../../assets/images/slider_image_4.jpg'
+import image1 from '@images/slider_image_1.jpg'
+import image2 from '@images/slider_image_2.jpg'
+import image3 from '@images/slider_image_3.jpg'
+import image4 from '@images/slider_image_4.jpg'
 
 const Slider = () => {
 	const content = [

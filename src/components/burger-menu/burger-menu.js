@@ -7,8 +7,8 @@ import {
 	Telegram,
 	Facebook,
 	Instagram,
-} from '../../assets/icons'
-import { burgerMenuItems } from '../../constants'
+} from '@icons'
+import { burgerMenuItems } from '@constants'
 
 const MenuItem = ({ item }) => {
 	return <li className="burger-menu__item">{item}</li>

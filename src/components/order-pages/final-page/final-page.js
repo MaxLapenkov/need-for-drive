@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import BurgerMenu from '../../burger-menu'
 import Header from '../../header'
 import Navigation from '../navigation'
-import { links, cars } from '../../../constants'
+import { links, cars } from '@constants'
 import '../order-page.scss'
 import './final-page.scss'
 

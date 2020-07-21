@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavArrow } from '../../../assets/icons'
+import { NavArrow } from '@icons'
 import './navigation.scss'
 import { Link } from 'react-router-dom'
 
